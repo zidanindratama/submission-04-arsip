@@ -1,5 +1,3 @@
----
-
 # 📒 Aplikasi Catatan Pribadi
 
 Proyek ini adalah aplikasi catatan sederhana berbasis **React + Vite + TailwindCSS**.
@@ -7,31 +5,31 @@ Aplikasi ini memungkinkan pengguna untuk membuat, mencari, menghapus, serta meng
 
 ## ✨ Fitur Utama
 
-* **Menampilkan Daftar Catatan**
+- **Menampilkan Daftar Catatan**
 
-  * Catatan ditampilkan berdasarkan data awal (initial notes).
-  * Menggunakan state untuk menyimpan catatan di memori.
-  * Jika daftar kosong, muncul pesan *“Tidak ada catatan”*.
+  - Catatan ditampilkan berdasarkan data awal (initial notes).
+  - Menggunakan state untuk menyimpan catatan di memori.
+  - Jika daftar kosong, muncul pesan _“Tidak ada catatan”_.
 
-* **Menambahkan Catatan**
+- **Menambahkan Catatan**
 
-  * Form input dengan *controlled component*.
-  * Batas judul maksimal 50 karakter dengan indikator sisa karakter.
-  * Data catatan baru langsung ditambahkan ke daftar.
+  - Form input dengan _controlled component_.
+  - Batas judul maksimal 50 karakter dengan indikator sisa karakter.
+  - Data catatan baru langsung ditambahkan ke daftar.
 
-* **Menghapus Catatan**
+- **Menghapus Catatan**
 
-  * Tombol *Delete* untuk menghapus catatan dari daftar.
+  - Tombol _Delete_ untuk menghapus catatan dari daftar.
 
-* **Mengarsipkan / Memindahkan Catatan**
+- **Mengarsipkan / Memindahkan Catatan**
 
-  * Tombol *Arsipkan* untuk memindahkan catatan ke bagian Arsip.
-  * Tombol *Pindahkan* untuk mengembalikan catatan dari Arsip ke daftar aktif.
+  - Tombol _Arsipkan_ untuk memindahkan catatan ke bagian Arsip.
+  - Tombol _Pindahkan_ untuk mengembalikan catatan dari Arsip ke daftar aktif.
 
-* **Pencarian Catatan**
+- **Pencarian Catatan**
 
-  * Kolom pencarian yang bisa memfilter catatan berdasarkan judul.
-  * Jika kolom pencarian kosong, semua catatan ditampilkan kembali.
+  - Kolom pencarian yang bisa memfilter catatan berdasarkan judul.
+  - Jika kolom pencarian kosong, semua catatan ditampilkan kembali.
 
 ## 📂 Struktur Proyek
 
@@ -48,32 +46,33 @@ src/
 
 ## 🚀 Teknologi
 
-* [React](https://react.dev/) – library UI berbasis komponen.
-* [Vite](https://vitejs.dev/) – bundler cepat dengan HMR.
-* [TailwindCSS](https://tailwindcss.com/) – styling utility-first.
+- [React](https://react.dev/) – library UI berbasis komponen.
+- [Vite](https://vitejs.dev/) – bundler cepat dengan HMR.
+- [TailwindCSS](https://tailwindcss.com/) – styling utility-first.
 
 ## ▶️ Cara Menjalankan
 
 1. Clone repo ini
 
    ```bash
-   git clone <url-repo-kamu>
-   cd <folder-proyek>
+   git clone <https://github.com/zidanindratama/submission-04-arsip>
+   cd <https://github.com/zidanindratama/submission-04-arsip>
    ```
+
 2. Install dependencies
 
    ```bash
    npm install
    ```
+
 3. Jalankan aplikasi
 
    ```bash
    npm run dev
    ```
+
 4. Akses di browser
 
    ```
    http://localhost:5173
    ```
-
----
