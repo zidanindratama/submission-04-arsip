@@ -2,33 +2,10 @@ import React, { useState } from "react";
 import NoteInput from "./components/NoteInput";
 import NoteList from "./components/NoteList";
 import SearchBar from "./components/SearchBar";
+import { getInitialData } from "./utils/data";
 
 function App() {
-  const initialNotes = [
-    {
-      id: +new Date(),
-      title: "Belajar React",
-      body: "React adalah library JavaScript untuk membangun antarmuka pengguna. Catatan ini dibuat sebagai contoh data awal.",
-      archived: false,
-      createdAt: new Date().toISOString(),
-    },
-    {
-      id: +new Date() + 1,
-      title: "Belajar Tailwind",
-      body: "TailwindCSS memudahkan kita menulis style langsung di className tanpa harus menulis file CSS terpisah.",
-      archived: false,
-      createdAt: new Date().toISOString(),
-    },
-    {
-      id: +new Date() + 2,
-      title: "Belajar State",
-      body: "State di React digunakan untuk menyimpan data dinamis yang bisa berubah seiring interaksi pengguna.",
-      archived: true,
-      createdAt: new Date().toISOString(),
-    },
-  ];
-
-  const [notes, setNotes] = useState(initialNotes);
+  const [notes, setNotes] = useState(getInitialData());
   const [search, setSearch] = useState("");
 
   const addNote = (note) => {
@@ -37,12 +14,12 @@ function App() {
   };
 
   const deleteNote = (id) => {
-    setNotes(notes.filter((n) => n.id !== id));
+    setNotes((prev) => prev.filter((n) => n.id !== id));
   };
 
   const toggleArchive = (id) => {
-    setNotes(
-      notes.map((n) => (n.id === id ? { ...n, archived: !n.archived } : n))
+    setNotes((prev) =>
+      prev.map((n) => (n.id === id ? { ...n, archived: !n.archived } : n))
     );
   };
 

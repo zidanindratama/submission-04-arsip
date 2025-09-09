@@ -1,13 +1,14 @@
 import React from "react";
+import { showFormattedDate } from "../utils/data";
 
 function NoteItem({ note, deleteNote, toggleArchive }) {
   return (
     <div className="bg-gray-800 p-4 rounded shadow">
       <h3 className="text-lg font-bold mb-1">{note.title}</h3>
       <p className="text-sm text-gray-400 mb-2">
-        {new Date(note.createdAt).toLocaleDateString()}
+        {showFormattedDate(note.createdAt)}
       </p>
-      <p className="mb-3">{note.body}</p>
+      <p className="mb-3 whitespace-pre-wrap">{note.body}</p>
       <div className="flex gap-2">
         <button
           onClick={() => deleteNote(note.id)}
